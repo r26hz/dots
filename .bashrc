@@ -21,6 +21,11 @@ set -o vi
 # c-l breaks in vi mode
 bind -x '"\C-l":clear'
 
+# path
+#
+
+export PATH=":~/go/bin/:/usr/lib/ccache/bin/:$PATH"
+
 
 # history
 
@@ -66,6 +71,22 @@ alias ta='task add'
 
 alias sb='source ~/.bashrc'
 
+# bazel
+alias br='bazel run'
+
+# kubectl
+alias kubectl='kubecolor'
+alias k='kubectl'
+# k9s
+alias k9='k9s'
+alias k9s='k9s -A'
+
+# functions
+function a() {
+    alias | grep "$1"
+}
+
+
 # -----------------------------------------------------
 # ML4W Apps
 # -----------------------------------------------------
@@ -101,6 +122,9 @@ alias gl='git log --graph --decorate --all'
 alias gll='gl --pretty=format:"%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d %Creset%s" --relative-date'
 alias glll='gl --color --graph --pretty=format:'\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset'\'' --abbrev-commit'
 
+alias gw="git worktree"
+alias gwl="git worktree list"
+alias gwrm="git worktree remove"
 
 # -----------------------------------------------------
 # SCRIPTS
@@ -164,7 +188,6 @@ source ~/.fzf.bash
 # person alias
 alias z=zoxide
 
-export PATH="/usr/lib/ccache/bin/:$PATH"
 
 # ac function
 function ac() {
@@ -186,7 +209,7 @@ function ac() {
 alias dotsync="~/dotfiles-versions/dotfiles/.dev/sync.sh dotfiles"
 
 export AWS_PROFILE=firedex-dev
-export KUBECONFIG=~/.kube/firedex-dev-kubeconfig.yml
+export KUBECONFIG=~/.kube/firedex-dev-kubeconfig.yml:~/.kube/firedex-staging-kubeconfig.yml:~/.kube/firedex-prod-kubeconfig.yml
 # -----------------------------------------------------
 # START STARSHIP
 # -----------------------------------------------------
