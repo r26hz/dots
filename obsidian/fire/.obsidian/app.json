@@ -2,5 +2,6 @@
   "newFileLocation": "folder",
   "newFileFolderPath": "~/obsidian",
   "attachmentFolderPath": "~/obsidian",
-  "vimMode": true
+  "vimMode": true,
+  "showLineNumber": true
 }

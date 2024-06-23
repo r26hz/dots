@@ -14,3 +14,4 @@ neovim
 ## Work
 iproute2
 net-tools
+i
