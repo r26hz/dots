@@ -29,10 +29,12 @@ alias wifi='nmtui'
 alias dot="cd ~/dots"
 
 alias eza='eza --group-directories-first --icons'
-alias l='eza -xa'
+alias l='eza -x'
+alias la='eza -xa'
 alias ls='eza -a1'
-alias ll='eza -al'
+alias ll='eza -l'
 alias lt='eza -a --tree --level=1'
+alias ltt='eza -a --tree --level=2'
 
 alias shutdown='systemctl poweroff'
 
