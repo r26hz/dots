@@ -6,7 +6,7 @@ export VIRTUAL=nvim
 export AWS_PROFILE=firedex-dev
 export KUBECONFIG=~/.kube/config
 
-PATH="$PATH:~/go/bin/:/usr/lib/ccache/bin"
+PATH="$PATH:~/go/bin/:/usr/lib/ccache/bin:~/.cargo/bin"
 
 stty -ixon # Disable ctrl-s and ctrl-q (which locks your prompt)
 shopt -s autocd # navigate to directory without cd
