@@ -1,3 +1,5 @@
+https://devhints.io/
+
 AWS 
 alias IAM -> Dashboard
 
@@ -39,3 +41,8 @@ targetlist
 
 check for sql inject
 --script http-sql-injection
+
+
+KUBECTL ALIAS
+https://stackoverflow.com/questions/69539852/how-to-enable-autocomplete-subcommnads-on-function-thats-call-kubectl
+
