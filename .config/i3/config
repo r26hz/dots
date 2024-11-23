@@ -225,12 +225,12 @@ exec --no-startup-id xrandr --output eDP-1 --auto --output DP-3 --left-of eDP-1 
 # exec_always --no-startup-id $HOME/.config/polybar/forest/launch.sh
 
 
-bindsym $mod+Escape exec i3lock --color 000000
+bindsym $mod+shift+Escape exec i3lock --color 000000
 
 bindsym $mod+equal bar mode toggle
 
 set $bar_setting_position            top
-set $bar_setting_mode                dock
+set $bar_setting_mode                invisible
 set $bar_setting_font                pango:Source Sans Pro, Semibold 9
 set $bar_setting_separator           " - "
 set $bar_setting_statusCommand       i3status --config ~/.config/i3/i3status
@@ -259,52 +259,52 @@ set $bar_color_workspace_urgent_fg   #2E3440
 #          status_command i3status
 # }
 ### i3bar ###
-bar {
-   output           HDMI-1
-   position         bottom
-   padding          0 1px
-   mode             invisible
-   hidden_state hide
-   modifier Mod2
-   font             $bar_setting_font
-   separator_symbol $bar_setting_separator
-   status_command   $bar_setting_statusCommand
-   tray_output      $bar_setting_trayoutput
-
-   colors {
-      background   $bar_color_background
-      statusline   $bar_color_statusline
-      separator    $bar_color_separator
-
-      focused_workspace  $bar_color_workspace_focused_bg  $bar_color_workspace_focused_bg  $bar_color_workspace_focused_fg
-      active_workspace   $bar_color_workspace_active_bg   $bar_color_workspace_active_bg   $bar_color_workspace_active_fg
-      inactive_workspace $bar_color_workspace_inactive_bg $bar_color_workspace_inactive_bg $bar_color_workspace_inactive_fg
-      urgent_workspace   $bar_color_workspace_urgent_bg   $bar_color_workspace_urgent_bg   $bar_color_workspace_urgent_fg
-   }
-}
-
-bar {
-   output           eDP-1
-   position         $bar_setting_position
-   mode             $bar_setting_mode
-   hidden_state show
-   modifier Mod2
-   font             $bar_setting_font
-   separator_symbol $bar_setting_separator
-   status_command   $bar_setting_statusCommand
-   tray_output      $bar_setting_trayoutput
-
-   colors {
-      background   $bar_color_background
-      statusline   $bar_color_statusline
-      separator    $bar_color_separator
-
-      focused_workspace  $bar_color_workspace_focused_bg  $bar_color_workspace_focused_bg  $bar_color_workspace_focused_fg
-      active_workspace   $bar_color_workspace_active_bg   $bar_color_workspace_active_bg   $bar_color_workspace_active_fg
-      inactive_workspace $bar_color_workspace_inactive_bg $bar_color_workspace_inactive_bg $bar_color_workspace_inactive_fg
-      urgent_workspace   $bar_color_workspace_urgent_bg   $bar_color_workspace_urgent_bg   $bar_color_workspace_urgent_fg
-   }
-}
+# bar {
+#    output           HDMI-1
+#    position         bottom
+#    padding          0 1px
+#    mode             hide
+#    hidden_state hide
+#    modifier Mod2
+#    font             $bar_setting_font
+#    separator_symbol $bar_setting_separator
+#    status_command   $bar_setting_statusCommand
+#    tray_output      $bar_setting_trayoutput
+#
+#    colors {
+#       background   $bar_color_background
+#       statusline   $bar_color_statusline
+#       separator    $bar_color_separator
+#
+#       focused_workspace  $bar_color_workspace_focused_bg  $bar_color_workspace_focused_bg  $bar_color_workspace_focused_fg
+#       active_workspace   $bar_color_workspace_active_bg   $bar_color_workspace_active_bg   $bar_color_workspace_active_fg
+#       inactive_workspace $bar_color_workspace_inactive_bg $bar_color_workspace_inactive_bg $bar_color_workspace_inactive_fg
+#       urgent_workspace   $bar_color_workspace_urgent_bg   $bar_color_workspace_urgent_bg   $bar_color_workspace_urgent_fg
+#    }
+# }
+#
+# bar {
+#    output           eDP-1
+#    position         $bar_setting_position
+#    mode             $bar_setting_mode
+#    hidden_state show
+#    modifier Mod2
+#    font             $bar_setting_font
+#    separator_symbol $bar_setting_separator
+#    status_command   $bar_setting_statusCommand
+#    tray_output      $bar_setting_trayoutput
+#
+#    colors {
+#       background   $bar_color_background
+#       statusline   $bar_color_statusline
+#       separator    $bar_color_separator
+#
+#       focused_workspace  $bar_color_workspace_focused_bg  $bar_color_workspace_focused_bg  $bar_color_workspace_focused_fg
+#       active_workspace   $bar_color_workspace_active_bg   $bar_color_workspace_active_bg   $bar_color_workspace_active_fg
+#       inactive_workspace $bar_color_workspace_inactive_bg $bar_color_workspace_inactive_bg $bar_color_workspace_inactive_fg
+#       urgent_workspace   $bar_color_workspace_urgent_bg   $bar_color_workspace_urgent_bg   $bar_color_workspace_urgent_fg
+#    }
+# }
 
 ## Screenshots
 bindsym Print exec --no-startup-id maim "/home/$USER/media/screenshots/$(date +"%Y-%m-%d-%H-%M-%S").png"

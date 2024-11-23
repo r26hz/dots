@@ -36,11 +36,13 @@ force_display = false
 
 [aws.region_aliases]
 us-west-2 = ""
+ap-northeast-1 = ""
 
 [aws.profile_aliases]
 firedex-dev = ""
 firedex-staging = "S"
 firedex-prod = "P"
+agni-staging = "AG-S"
 
 [battery]
 full_symbol = "󰁹 "
@@ -54,6 +56,10 @@ format = "[$symbol$percentage]($style)"
 [[battery.display]]
 threshold = 15
 style = 'bold red'
+
+[[battery.display]]
+threshold = 100
+style = 'bold yellow'
 
 [character]
 format = "$symbol "
@@ -121,7 +127,7 @@ disabled = false
 symbol = ""
 format = '[$symbol$context(\($namespace\))]($style)'
 style = "cyan bold"
-disabled = false
+disabled = true
 detect_extensions = []
 detect_files = []
 detect_folders = []

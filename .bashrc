@@ -3,8 +3,8 @@
 
 export EDITOR=nvim
 export VIRTUAL=nvim
-export AWS_PROFILE=firedex-dev
-export KUBECONFIG=~/.kube/config
+export AWS_PROFILE=firedex-staging
+export KUBECONFIG=~/.kube/firedex-staging-kubeconfig.yml
 
 PATH="$PATH:~/go/bin/:/usr/lib/ccache/bin:~/.cargo/bin"
 
@@ -21,6 +21,7 @@ HISTCONTROL=erasedups:ignoreboth
 HISTIGNORE="!(+(*\ *)):history:pwd"
 HISTTIMEFORMAT="%m/%d - %H:%M:%S: "
  
+alias tf="terraform"
 alias p="sudo pacman"
 alias v='$EDITOR'
 alias n='$EDITOR'
@@ -50,6 +51,10 @@ alias ta='task add'
 alias sb='source ~/.bashrc'
 alias br='bazel run'
 
+
+alias kns=kubens
+alias kctx=kubectx
+
 alias kubectl='kubecolor'
 alias k='kubectl'
 alias kg='kubectl get'
@@ -77,8 +82,11 @@ alias gwl="git worktree list"
 alias gwrm="git worktree remove"
 
 alias xra="xrandr --auto"
-alias xrd="xrandr --output eDP-1 --auto --output DP-3 --auto --left-of eDP-1 --primary"
+alias xrd="xrandr --output eDP-1 --auto --output DP-4 --auto --left-of eDP-1 --primary"
+alias xrdr="xrandr --output eDP-1 --auto --output DP-3 --auto --right-of eDP-1 --primary"
 alias xrt="xrandr --output eDP-1 --auto --output DP-3 --auto --left-of eDP-1 --primary --output HDMI-1 --auto --above DP-3"
+alias xr4k="xrandr --output eDP-1 --off --output DP-3 --auto --right-of eDP-1 --primary"
+
 
 # ac function
 function ac() {
@@ -120,3 +128,7 @@ source <(kubectl completion bash | sed 's/kubectl/k/g')
 #complete -F _complete_alias "${!BASH_ALIASES[@]}"
 
 eval "$(starship init bash)" # needs to be at the end
+
+# Created by `pipx` on 2024-06-26 06:20:26
+export PATH="$PATH:/home/ricky/.local/bin"
+export PATH="$PATH:/home/ricky/.linkerd2/bin"
