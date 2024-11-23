@@ -1,0 +1,1 @@
+https://github.com/bitcoin/bitcoin/blob/master/doc/managing-wallets.md

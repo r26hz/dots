@@ -3,5 +3,6 @@
   "newFileFolderPath": "~/obsidian",
   "attachmentFolderPath": "~/obsidian",
   "vimMode": true,
-  "showLineNumber": true
+  "showLineNumber": true,
+  "readableLineLength": false
 }
